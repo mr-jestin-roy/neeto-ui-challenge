@@ -3,11 +3,11 @@ import * as yup from "yup";
 export const NOTES_FORM_INITIAL_FORM_VALUES = {
   title: "",
   description: "",
-  contact: "",
-  tag: "",
+  role: null,
+  tags: [],
 };
 
-export const ROLE = [
+export const ROLES = [
   {
     label: "Owner",
     value: "owner",
@@ -33,17 +33,42 @@ export const TAGS = [
   },
   {
     label: "UX",
-    value: 3,
-  },
-  {
-    label: "Bugs",
     value: 4,
   },
   {
-    label: "V2",
+    label: "Bugs",
     value: 5,
   },
+  {
+    label: "v2",
+    value: 6,
+  },
 ];
+
+export const NOTES_FORM_VALIDATION_SCHEMA = yup.object().shape({
+  title: yup.string().required("Title is required"),
+  description: yup.string().required("Description is required"),
+  role: yup
+    .object()
+    .nullable()
+    .shape({
+      label: yup.string().oneOf(ROLES.map(tag => tag.label)),
+      value: yup.string().oneOf(ROLES.map(tag => tag.value)),
+    })
+    .required("Role is required"),
+  tags: yup
+    .array(
+      yup
+        .object()
+        .nullable()
+        .shape({
+          label: yup.string().oneOf(TAGS.map(tag => tag.label)),
+          value: yup.number().oneOf(TAGS.map(tag => tag.value)),
+        })
+    )
+    .min(1, "Tag is required")
+    .required("Tag is required"),
+});
 
 export const NOTES_TABLE_COLUMN_DATA = [
   {
@@ -112,22 +137,3 @@ export const MenuBarBlocks = {
     },
   ],
 };
-
-export const NOTES_FORM_VALIDATION_SCHEMA = yup.object().shape({
-  title: yup.string().required("Title is required"),
-  description: yup.string().required("Description is required"),
-  contact: yup
-    .object({
-      label: yup.string().required(),
-      value: yup.string().required(),
-    })
-    .nullable()
-    .required("Assigned Contact is required."),
-  tag: yup
-    .object({
-      label: yup.string().required(),
-      value: yup.string().required(),
-    })
-    .nullable()
-    .required("Tag is required."),
-});

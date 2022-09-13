@@ -31,7 +31,6 @@ const Note = ({ note, setSelectedNoteIds, setShowDeleteAlert }) => (
     <div className="mt-3 flex justify-between">
       <Tag
         className="neeto-ui-bg-gray-200"
-        // TODO : Change this line to show selected tags , keep this as default for now.
         label="Getting Started"
         size="small"
       />
