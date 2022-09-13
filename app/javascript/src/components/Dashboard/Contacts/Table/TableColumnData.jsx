@@ -3,6 +3,8 @@ import React from "react";
 import { MenuHorizontal } from "neetoicons";
 import { Typography, Avatar, Dropdown } from "neetoui";
 
+import AvatarProfile from "../../../../../../assets/images/AvatarProfile";
+
 export const getTableColumnData = showAlert => [
   {
     title: "Name & Role",
@@ -13,7 +15,7 @@ export const getTableColumnData = showAlert => [
       <div className="flex space-x-2">
         <Avatar
           user={{
-            imageUrl: `https://i.pravatar.cc/300`,
+            imageUrl: AvatarProfile,
           }}
         />
         <div>
@@ -65,7 +67,7 @@ export const CONTACTS_TABLE_COLUMN_DATA = [
       <div className="flex space-x-2">
         <Avatar
           user={{
-            imageUrl: `https://i.pravatar.cc/300`,
+            imageUrl: AvatarProfile,
           }}
         />
         <div>
