@@ -1,8 +1,10 @@
 import React from "react";
 
-import dayjs from "dayjs";
+import AvatarProfile from "images/AvatarProfile";
 import { MenuVertical, Clock } from "neetoicons";
 import { Typography, Tag, Avatar, Dropdown, Tooltip } from "neetoui";
+
+import { calculateCreatedAgo, convertDateToWeekdayTime } from "./utils";
 
 const Note = ({ note, setSelectedNoteIds, setShowDeleteAlert }) => (
   <div className="mb-3 w-full border border-gray-300 p-4 shadow-md">
@@ -29,26 +31,25 @@ const Note = ({ note, setSelectedNoteIds, setShowDeleteAlert }) => (
     <div className="mt-3 flex justify-between">
       <Tag
         className="neeto-ui-bg-gray-200"
-        // Change this line to show selected tags , keep this as default for now.
+        // TODO : Change this line to show selected tags , keep this as default for now.
         label="Getting Started"
         size="small"
       />
       <div className="flex items-center space-x-2">
         <Clock size={15} />
         <Tooltip
-          content={dayjs(note.created_at).format("dddd, hh:mmA")}
-          position="top"
+          content={convertDateToWeekdayTime(note.updated_at)}
+          position="bottom"
         >
           <Typography style="body3">
-            Created {dayjs(note.created_at).fromNow()}
+            Created {calculateCreatedAgo(note.created_at)}
           </Typography>
         </Tooltip>
         <Avatar
           size="small"
           user={{
-            name: "Neeto UI",
-            // Random Avatar profile picture generated from pravatar.cc
-            imageUrl: "https://i.pravatar.cc/300",
+            name: "neetoUI",
+            imageUrl: AvatarProfile,
           }}
         />
       </div>

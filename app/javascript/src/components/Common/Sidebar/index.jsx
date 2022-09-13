@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import AvatarProfile from "images/AvatarProfile";
 import { Sidebar as NeetoUISidebar } from "neetoui/layouts";
 import { useHistory } from "react-router-dom";
 
@@ -57,8 +58,7 @@ const Sidebar = () => {
       }}
       profileInfo={{
         name: `${user.first_name} ${user.last_name}`,
-        // Random Avatar profile picture generated from pravatar.cc
-        imageUrl: "https://i.pravatar.cc/300",
+        imageUrl: AvatarProfile,
         email: user.email,
         bottomLinks,
       }}

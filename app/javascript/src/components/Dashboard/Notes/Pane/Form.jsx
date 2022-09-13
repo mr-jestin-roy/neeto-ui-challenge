@@ -6,7 +6,7 @@ import { Input, Select, Textarea } from "neetoui/formik";
 
 import notesApi from "apis/notes";
 
-import { NOTES_FORM_VALIDATION_SCHEMA, TAGS, DESIGNATION } from "../constants";
+import { NOTES_FORM_VALIDATION_SCHEMA, TAGS, ROLE } from "../constants";
 
 const NoteForm = ({ onClose, refetch, note, isEdit }) => {
   const [submitted, setSubmitted] = useState(false);
@@ -57,7 +57,7 @@ const NoteForm = ({ onClose, refetch, note, isEdit }) => {
               className="w-full flex-grow-0"
               label="Assigned Contact"
               name="assigned contact"
-              options={DESIGNATION}
+              options={ROLE}
               placeholder="Select Role"
             />
             <Select
