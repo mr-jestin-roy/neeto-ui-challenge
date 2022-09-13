@@ -54,16 +54,17 @@ const NoteForm = ({ onClose, refetch, note, isEdit }) => {
             <Select
               isSearchable
               required
-              className="full-grow-0 w-full"
+              className="w-full flex-grow-0"
               label="Assigned Contact"
               name="assigned contact"
               options={DESIGNATION}
               placeholder="Select Role"
             />
             <Select
+              isMulti
               isSearchable
               required
-              className="full-grow-0 w-full"
+              className="w-full flex-grow-0"
               label="Tags"
               name="tags"
               options={TAGS}
