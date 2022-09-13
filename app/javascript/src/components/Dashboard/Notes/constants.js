@@ -1,6 +1,10 @@
+import * as yup from "yup";
+
 export const NOTES_FORM_INITIAL_FORM_VALUES = {
   title: "",
   description: "",
+  contact: "",
+  tag: "",
 };
 
 export const ROLE = [
@@ -103,3 +107,22 @@ export const MenuBarBlocks = {
     },
   ],
 };
+
+export const NOTES_FORM_VALIDATION_SCHEMA = yup.object().shape({
+  title: yup.string().required("Title is required"),
+  description: yup.string().required("Description is required"),
+  contact: yup
+    .object({
+      label: yup.string().required(),
+      value: yup.string().required(),
+    })
+    .nullable()
+    .required("Assigned Contact is required."),
+  tag: yup
+    .object({
+      label: yup.string().required(),
+      value: yup.string().required(),
+    })
+    .nullable()
+    .required("Tag is required."),
+});
