@@ -9,7 +9,7 @@ import { ContactDetails } from "../constants";
 const Table = ({ showAlert }) => (
   <ContactTable
     allowRowClick
-    ColumnData={getTableColumnData(showAlert)}
+    columnData={getTableColumnData(showAlert)}
     rowData={ContactDetails}
   />
 );

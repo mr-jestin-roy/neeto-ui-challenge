@@ -24,22 +24,27 @@ export const TAGS = [
     value: 1,
   },
   {
-    label: "UX",
+    label: "Onboarding",
     value: 2,
   },
   {
-    label: "Bugs",
+    label: "User Flow",
     value: 3,
   },
   {
-    label: "Code Review",
+    label: "UX",
+    value: 3,
+  },
+  {
+    label: "Bugs",
     value: 4,
   },
   {
-    label: "Meeting",
+    label: "V2",
     value: 5,
   },
 ];
+
 export const NOTES_TABLE_COLUMN_DATA = [
   {
     title: "Title",

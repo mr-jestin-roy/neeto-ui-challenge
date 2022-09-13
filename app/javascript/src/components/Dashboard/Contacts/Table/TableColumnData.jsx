@@ -27,19 +27,19 @@ export const getTableColumnData = showAlert => [
     title: "Email",
     dataIndex: "email",
     key: "email",
-    width: "30",
+    width: "30%",
   },
   {
     title: "Created At",
     dataIndex: "created_at",
     key: "created_at",
-    width: "30",
+    width: "30%",
   },
   {
     title: "",
     dataIndex: "more",
     key: "more",
-    width: "10",
+    width: "10%",
     render: () => (
       <Dropdown
         buttonStyle="text"
@@ -79,19 +79,19 @@ export const CONTACTS_TABLE_COLUMN_DATA = [
     title: "Email",
     dataIndex: "email",
     key: "email",
-    width: "30",
+    width: "30%",
   },
   {
     title: "Created At",
     dataIndex: "created_at",
     key: "created_at",
-    width: "30",
+    width: "30%",
   },
   {
     title: "",
     dataIndex: "more",
     key: "more",
-    width: "10",
+    width: "10%",
     render: () => (
       <Dropdown
         buttonStyle="text"

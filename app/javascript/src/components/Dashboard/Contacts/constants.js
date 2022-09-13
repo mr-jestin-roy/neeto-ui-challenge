@@ -55,34 +55,6 @@ export const ContactDetails = [
     email: "albert@borer.com",
     created_at: "Sep 13, 2022",
   },
-  {
-    id: 8,
-    name: "Ronald Richards",
-    role: "Owner",
-    email: "albert@borer.com",
-    created_at: "Sep 13, 2022",
-  },
-  {
-    id: 9,
-    name: "Jacob Jones",
-    role: "Owner",
-    email: "albert@borer.com",
-    created_at: "Sep 13, 2022",
-  },
-  {
-    id: 10,
-    name: "Ronald Richards",
-    role: "Owner",
-    email: "albert@borer.com",
-    created_at: "Sep 13, 2022",
-  },
-  {
-    id: 11,
-    name: "Jacob Jones",
-    role: "Owner",
-    email: "albert@borer.com",
-    created_at: "Sep 13, 2022",
-  },
 ];
 
 export const MenuBarBlocks = {

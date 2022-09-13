@@ -25,14 +25,8 @@ const Contacts = () => {
       <Container>
         <Header
           menuBarToggle
+          actionBlock={<Button icon="ri-add-line" label="Add Contacts" />}
           title="All Contacts"
-          actionBlock={
-            <Button
-              icon="ri-add-line"
-              label="Add Contacts"
-              // onClick={() => setShowNewContactPane(true)}
-            />
-          }
           searchProps={{
             value: searchTerm,
             onChange: e => setSearchTerm(e.target.value),
@@ -41,12 +35,7 @@ const Contacts = () => {
         />
         <Table showAlert={() => handleDeleteAlert()} />
         <div className="mt-8 mb-8 flex w-full flex-row justify-end">
-          <Pagination
-            count={30}
-            navigate={function noRefCheck() {}}
-            pageNo={1}
-            pageSize={9}
-          />
+          <Pagination count={60} navigate={() => {}} pageNo={1} pageSize={10} />
         </div>
         <Alert
           isOpen={showDeleteAlert}
