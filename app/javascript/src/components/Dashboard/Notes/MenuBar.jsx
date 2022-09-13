@@ -24,7 +24,10 @@ const MenuBar = () => {
           iconProps={[
             {
               icon: Search,
-              onClick: () => setIsSearchCollapsed(!isSearchCollapsed),
+              onClick: () =>
+                setIsSearchCollapsed(
+                  prevSearchCollapsed => !prevSearchCollapsed
+                ),
             },
           ]}
         >
