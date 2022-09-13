@@ -1,9 +1,8 @@
 import React from "react";
 
+import AvatarProfile from "images/AvatarProfile"; //No need for alias  or parent
 import { MenuHorizontal } from "neetoicons";
 import { Typography, Avatar, Dropdown } from "neetoui";
-
-import AvatarProfile from "../../../../../../assets/images/AvatarProfile";
 
 export const getTableColumnData = showAlert => [
   {

@@ -1,7 +1,6 @@
 import React from "react";
 
-import dayjs from "lib/dayjs"; // eslint-disable-line
-
+import "lib/dayjs"; // eslint-disable-line
 import { AuthProvider } from "contexts/auth";
 import { UserProvider } from "contexts/user";
 
