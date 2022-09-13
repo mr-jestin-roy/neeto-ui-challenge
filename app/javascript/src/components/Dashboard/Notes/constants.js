@@ -10,6 +10,39 @@ export const NOTES_FORM_VALIDATION_SCHEMA = yup.object().shape({
   description: yup.string().required("Description is required"),
 });
 
+export const DESIGNATION = [
+  {
+    label: "Owner",
+    value: "owner",
+  },
+  {
+    label: "Employee",
+    value: "employee",
+  },
+];
+
+export const TAGS = [
+  {
+    label: "Getting Started",
+    value: 1,
+  },
+  {
+    label: "UX",
+    value: 2,
+  },
+  {
+    label: "Bugs",
+    value: 3,
+  },
+  {
+    label: "Code Review",
+    value: 4,
+  },
+  {
+    label: "Meeting",
+    value: 5,
+  },
+];
 export const NOTES_TABLE_COLUMN_DATA = [
   {
     title: "Title",
