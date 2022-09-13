@@ -55,19 +55,27 @@ const Notes = () => {
             />
           }
           searchProps={{
+            placeholder: "Search Name, Email, Phone Number, Etc.",
             value: searchTerm,
             onChange: e => setSearchTerm(e.target.value),
           }}
         />
         {notes.length ? (
-          notes.map(note => <Note key={note.id} note={note} />)
+          notes.map(note => (
+            <Note
+              key={note.id}
+              note={note}
+              setSelectedNoteIds={setSelectedNoteIds}
+              setShowDeleteAlert={setShowDeleteAlert}
+            />
+          ))
         ) : (
           <EmptyState
             image={EmptyNotesListImage}
             primaryAction={() => setShowNewNotePane(true)}
             primaryActionLabel="Add New Note"
-            subtitle="For customized mails add notes"
-            title="No notes added yet"
+            subtitle="Add your notes to send customized emails to them."
+            title="Looks like you don't have any notes!"
           />
         )}
         <NewNotePane

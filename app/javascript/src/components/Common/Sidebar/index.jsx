@@ -57,7 +57,8 @@ const Sidebar = () => {
       }}
       profileInfo={{
         name: `${user.first_name} ${user.last_name}`,
-        imageUrl: user.profile_image_path,
+        // Random Avatar profile picture generated from pravatar.cc
+        imageUrl: "https://i.pravatar.cc/300",
         email: user.email,
         bottomLinks,
       }}
