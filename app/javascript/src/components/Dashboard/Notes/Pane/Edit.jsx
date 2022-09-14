@@ -2,7 +2,7 @@ import React from "react";
 
 import { Pane, Typography } from "neetoui";
 
-import Form from "./Pane/Form";
+import Form from "./Form";
 
 const EditNotePane = ({ fetchNotes, showPane, setShowPane, note }) => {
   const onClose = () => setShowPane(false);
