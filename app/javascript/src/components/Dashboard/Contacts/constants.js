@@ -105,7 +105,10 @@ export const ROLES = [
 export const CONTACTS_FORM_VALIDATION_SCHEMA = yup.object().shape({
   firstname: yup.string().required("First name is required"),
   lastname: yup.string().required("Last name is required"),
-  email: yup.string().required("Email address is required"),
+  email: yup
+    .string()
+    .required("Email address is required")
+    .email("Invalid Email Address"),
   role: yup
     .object()
     .nullable()
