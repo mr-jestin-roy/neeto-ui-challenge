@@ -10,7 +10,10 @@ const Table = ({ showAlert }) => (
   <ContactTable
     allowRowClick
     columnData={getTableColumnData(showAlert)}
+    handlePageChange={() => {}}
     rowData={ContactDetails}
+    onRowClick={() => {}}
+    onRowSelect={() => {}}
   />
 );
 export default Table;

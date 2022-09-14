@@ -1,3 +1,11 @@
+import * as yup from "yup";
+
+export const CONTACTS_FORM_INITIAL_FORM_VALUES = {
+  firstname: "",
+  lastname: "",
+  email: "",
+  role: null,
+};
 export const ContactDetails = [
   {
     id: 0,
@@ -83,3 +91,27 @@ export const MenuBarBlocks = {
   segments: [],
   tags: [],
 };
+export const ROLES = [
+  {
+    label: "Owner",
+    value: "owner",
+  },
+  {
+    label: "Employee",
+    value: "employee",
+  },
+];
+
+export const CONTACTS_FORM_VALIDATION_SCHEMA = yup.object().shape({
+  firstname: yup.string().required("First name is required"),
+  lastname: yup.string().required("Last name is required"),
+  email: yup.string().required("Email address is required"),
+  role: yup
+    .object()
+    .nullable()
+    .shape({
+      label: yup.string().oneOf(ROLES.map(role => role.label)),
+      value: yup.string().oneOf(ROLES.map(role => role.value)),
+    })
+    .required("Role is required"),
+});
