@@ -103,3 +103,7 @@ group :test do
   # Check semaphore config - this gem only relevant in semaphoreCI
   gem "ffi", github: "ffi/ffi", submodules: true
 end
+
+gem "sqlite3", "~> 1.4", group: [:development, :test]
+
+gem "pg", group: [:production]
