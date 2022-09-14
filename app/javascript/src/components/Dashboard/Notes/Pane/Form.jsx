@@ -49,7 +49,7 @@ const NoteForm = ({ onClose, refetch, note, isEdit }) => {
               label="Description"
               name="description"
               placeholder="Enter Note Description"
-              rows={1}
+              rows={2}
             />
             <Select
               isSearchable
